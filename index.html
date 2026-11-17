@@ -223,31 +223,6 @@
                         </div>
                     </div>
 
-                    <div class="relative bg-gradient-to-br from-[#FAF6F9] to-white rounded-[20px] p-3.5 border-2 border-dashed border-candyPink shadow-sm z-10 overflow-hidden mt-1">
-                        <svg class="absolute -right-3 -bottom-3 w-14 h-14 text-[#F5D5E5] transform -rotate-12 pointer-events-none" fill="currentColor" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-                        <div class="flex items-start gap-3 relative z-10">
-                            <div class="bg-chocolate p-1.5 rounded-full shadow-md text-white flex-shrink-0 mt-1 animate-bounce">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-3.5 h-3.5">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-                                </svg>
-                            </div>
-                            <div class="text-[11.5px] text-chocolate leading-relaxed text-left flex-1">
-                                <span class="inline-block bg-chocolate text-white text-[9px] font-bold px-2 py-0.5 rounded-full mb-1.5 tracking-wider shadow-sm">
-                                    สำคัญ
-                                </span><br>
-                                โน้ตสลิปทุกครั้ง 
-                                <div class="fb-copy-btn mt-1 inline-flex items-center gap-1.5 bg-[#FAF6F9] border border-candyPink/50 px-2.5 py-1 rounded-xl cursor-pointer shadow-sm hover:bg-[#E9F4C9]/40 transition-all active:scale-95" onclick="copyText('ซื้อขายกับfb:ไอ๊ ย่ะะะ', this, 'fb', 'คัดลอกชื่อเฟสแล้ว')">
-                                    <span class="font-bold text-chocolate text-[12.5px]">"ซื้อขายกับfb:ไอ๊ ย่ะะะ"</span>
-                                    <span class="fb-icon-status text-candyPink">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-                                    </span>
-                                </div>
-                                <br>
-                                <span class="text-chocolate/80 text-[10px] mt-1.5 block leading-snug">ลืมโน้ตสลิป โอนใหม่ 1B พร้อมโน้ตนะคับ</span>
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="bg-[#FAF6F9]/80 border border-chocolate/15 rounded-2xl p-3 flex items-start gap-3 text-left shadow-sm">
                         <div class="bg-white p-1.5 rounded-full shadow-sm text-chocolate flex-shrink-0 border border-chocolate/5">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
@@ -287,7 +262,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4 text-candyPink anim-pulse">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
                 </svg>
-                เค้าจะรีบตอบกลับด่วนจี๋เลยคับ
+                ขอบคุณที่มาใช้บริการ
             </div>
         </div>
     </div>
@@ -353,23 +328,6 @@
         function handleCopySuccess(containerElement, type, successMessage) {
             showToast(successMessage);
             
-            if (type === 'fb') {
-                const iconContainer = containerElement.querySelector('.fb-icon-status');
-                const textContainer = containerElement.querySelector('.font-bold');
-                const originalText = textContainer.innerText;
-                
-                textContainer.innerText = '"คัดลอกสำเร็จ!"';
-                iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="#7D4B42" class="w-3.5 h-3.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>`;
-                containerElement.classList.add('bg-pastelBlue/60');
-                
-                setTimeout(() => {
-                    textContainer.innerText = originalText;
-                    iconContainer.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>`;
-                    containerElement.classList.remove('bg-pastelBlue/60');
-                }, 2000);
-                return;
-            }
-
             const isKbank = (type === 'kbank');
             const buttonElement = containerElement.querySelector(isKbank ? '.kbank-btn' : '.true-btn');
             const originalHtml = buttonElement.innerHTML;
